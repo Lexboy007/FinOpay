@@ -26,7 +26,7 @@ I successfully provisioned:
 | `outputs.tf`   | Key deployment outputs                       |
 
 ---
-(screenshot)
+![(screenshot)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/1.png)
 
 ##  Prerequisites
 
@@ -38,14 +38,14 @@ Before deploying, ensure the following are in place:
    ```bash
    terraform version
    ```
-   (screenshot)
+   ![(screenshot)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/2.png)
 3. **Azure CLI Installed and Logged In**
 
    ```bash
    az login
    az account set --subscription "<your_subscription_id>"
    ```
-   (screenshot)
+   ![(screenshot)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/3.png)
 
 
 ---
@@ -70,7 +70,7 @@ provider "azurerm" {
 }
 ```
 
- (Screenshot)
+![ (Screenshot)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/4.png)
 
 ---
 
@@ -94,7 +94,7 @@ variable "sql_admin_username" { description = "Admin username for SQL Server" }
 variable "sql_admin_password" { description = "Admin password for SQL Server", sensitive = true }
 ```
 
- (Screenshot)
+![ (Screenshot)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/5.png)
 
 ---
 
@@ -103,18 +103,18 @@ variable "sql_admin_password" { description = "Admin password for SQL Server", s
 Defines the infrastructure resources:
 
 * **Resource Group**
-(image)
+![(image)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/6.png)
 * **VNet + Subnets**
-(image)
+![(image)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/7.png)
 * **Network Security Groups**
-(image9)
+![(image9)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/9.png)
 * **Load Balancer + Backend Web VMs**
-(image)
-(image)
+![(image)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/8.png)
+![(image)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/10.png)
 * **Key Vault**
-(image)
+![(image)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/11.png)
 * **Azure SQL Server (PaaS)**
-(image)
+![(image)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/12.png)
 
 ---
 
@@ -144,7 +144,7 @@ output "key_vault_id" {
 }
 ```
 
-(Screenshot)
+![(Screenshot)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/13.png)
 
 ---
 
@@ -156,7 +156,7 @@ output "key_vault_id" {
 terraform init
 ```
 
-(Screenshot)
+![(Screenshot)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/14.png)
 
 ---
 
@@ -167,7 +167,7 @@ terraform fmt
 terraform validate
 ```
 
-(Screenshot)
+![(Screenshot)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/15.png)
 
 ---
 
@@ -177,10 +177,10 @@ terraform validate
 terraform plan -out=tfplan
 ```
 
-(Screnshot)
-(Screnshot)
-(Screnshot)
-(screen)
+![(Screnshot)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/16.png)
+![(Screnshot)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/17.png)
+![(Screnshot)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/18.png)
+![(screen)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/19.png)
 
 ---
 
@@ -189,8 +189,8 @@ terraform plan -out=tfplan
 ```bash
 terraform apply "tfplan"
 ```
-(Screenshot)
-(screen)
+![(Screenshot)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/20.png)
+![(screen)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/21.png)
 
 ---
 
@@ -200,27 +200,35 @@ terraform apply "tfplan"
 terraform output
 ```
 
-(Screenshot)
+![(Screenshot)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/22.png)
 
 ```bash
 terraform state list
 
 ```
-(screen)
+![(screen)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/23.png)
 ---
 
 ### Step 6: Validate in Azure Portal
 
 Check the following under your **Resource Group**:
+![(screen)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/24.png)
+![(image)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/25.png)
 
 *  Virtual Network and Subnets
 * Network Security Groups
-*  Load Balancer frontend/backend configuration
-* Deployed Linux Web VMs
-*  Azure SQL Server & Database
-* Key Vault
 
-  Azure resource group tab
+*  Load Balancer frontend/backend configuration
+![(image)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/load%20balancer.png)
+
+* Deployed Linux Web VMs
+
+*  Azure SQL Server & Database
+![(screenshot)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/sql.png)
+
+* Key Vault
+ ![(image)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/key.png)
+  
 
 ---
 
@@ -232,8 +240,8 @@ When done, destroy all resources to avoid billing charges.
 terraform destroy
 ```
 
-(Screenshot)
-(screenshot)
+![(Screenshot)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/26.png)
+
 
 ---
 
@@ -301,11 +309,11 @@ All issues were resolved successfully, leading to a fully validated Terraform co
 
 
  snippets of actual terminal errors 
- (image)
-  (image)
-   (image)
-    (image)
-  (image)  
+![ (image)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/error1.png)
+ ![ (image)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/rror2.png)
+  ![ (image)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/rror%203.png)
+    ![(image)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/error4.png)
+  ![(image)](https://github.com/Lexboy007/FinOpay/blob/main/Fionpay%20screenshots/error5.png)  
 
 ---
 
